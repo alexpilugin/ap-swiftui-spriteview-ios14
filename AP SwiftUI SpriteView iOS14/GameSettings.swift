@@ -11,6 +11,6 @@ import Foundation
 // Our observable object class
 class GameSettings: ObservableObject {
     
-    @Published var score = 0
+    @Published var score: Int = 0
     
 }

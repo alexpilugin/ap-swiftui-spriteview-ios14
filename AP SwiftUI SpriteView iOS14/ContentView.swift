@@ -17,24 +17,31 @@ import SpriteKit
 // A sample SwiftUI creating a GameScene and sizing it at 300x400 points
 struct ContentView: View {
     
+    /*
+        EnvironmentObject is immutable, properties of EnvironmentObject is mutable
+        https://developer.apple.com/forums/thread/652075
+    */
     @EnvironmentObject var settings: GameSettings
     
     var scene: SKScene {
-        let scene = GameScene()
-        scene.size = CGSize(width: 300, height: 400)
-        scene.scaleMode = .fill
+        let scene =  GameScene(score: $settings.score)
+        //scene.showsFPS = true //<---- ERROR
+        //scene.showsNodeCount = true //<---- ERROR
         return scene
     }
 
     var body: some View {
-        SpriteView(scene: scene)
-            .frame(width: 300, height: 400)
-            .ignoresSafeArea()
+        VStack {
+            SpriteView(scene: scene)
+                .frame(width: 300, height: 400)
+                .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            Text("Score: \(self.settings.score)")
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(GameSettings())
     }
 }
