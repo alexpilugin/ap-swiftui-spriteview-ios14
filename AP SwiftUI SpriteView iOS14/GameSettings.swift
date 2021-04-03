@@ -6,7 +6,7 @@
 //
 // Based on https://www.hackingwithswift.com/quick-start/swiftui/how-to-use-environmentobject-to-share-data-between-views
 
-import Foundation
+import SwiftUI
 
 // Our observable object class
 class GameSettings: ObservableObject {

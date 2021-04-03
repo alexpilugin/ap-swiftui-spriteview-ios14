@@ -6,6 +6,7 @@
 //  New in iOS 14
 
 /*  Based on https://www.hackingwithswift.com/quick-start/swiftui/how-to-integrate-spritekit-using-spriteview
+ or youtube: https://www.youtube.com/watch?v=4XKOPH6PXBY
  
  Inquiry regarding SwiftUI and SpriteKit Integration:
  https://www.hackingwithswift.com/forums/swiftui/inquiry-regarding-swiftui-and-spritekit-integration/6872

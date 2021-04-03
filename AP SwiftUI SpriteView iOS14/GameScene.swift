@@ -18,6 +18,7 @@ class GameScene: SKScene {
      # EnvironmentObject usage in init() of a View
      
      https://www.hackingwithswift.com/forums/swiftui/environmentobject-usage-in-init-of-a-view/5795
+     https://developer.apple.com/forums/thread/652075
      The environment is passed down when the body is called, so it doesn't yet exist during the initialization phase of the View struct.
      
         init(settings: Binding<GameSettings>) {
@@ -55,7 +56,7 @@ class GameScene: SKScene {
         box.position = location
         box.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
         self.addChild(box)
-        score += 1
+        //score += 1
         /*
         let ball = SKShapeNode(circleOfRadius: 30)
         ball.fillColor = SKColor.gray
